@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AC1</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="header">
+        <img src="./logo/Logo.png" alt="Logo" class="logo" />
+        <img src="./logo/header.png" alt="Header" class="header-image" />
+    </header>
+
+    <div class="container mt-5">
+        <h1 class="text-center">FILE HANDLING</h1>
+        <p class="text-center">Click on each topic to learn more.</p>
+        <div class="row">
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#fileHandlingModal">
+                    File Handling
+                </button>
+            </div>
+            
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#fileOpenModal">
+                    Opening a File
+                </button>
+            </div>
+
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#fileModesModal">
+                    File Modes
+                </button>
+            </div>
+
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#readingFileModal">
+                    Reading a File
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#writingFileModal">
+                    Writing to a File
+                </button>
+            </div>
+
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#closingFileModal">
+                    Closing a File
+                </button>
+            </div>
+          
+        </div>
+        
+        
+
+</div>
+
+        <!-- Modals -->
+        <div class="modal fade" id="fileHandlingModal" tabindex="-1" aria-labelledby="fileHandlingLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fileHandlingLabel">File Handling</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <div style="font-size: 1.5rem;">
+                                    <strong style="color: #007bff;">File Handling</strong> is a way to store data on your computer.
+                                    <br><br>
+                                    With Python, we can:
+                                    <ul>
+                                        <li><strong>Write data to a file</strong></li>
+                                        <li><strong>Read data from a file</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="fileOpenModal" tabindex="-1" aria-labelledby="fileOpenLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fileOpenLabel">Opening a File</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <div style="font-size: 1.5rem;">
+                            
+                                    <ul>
+                                        <li><b>open():</b> Creates a link between your program and the file on your system.</li>
+                                        <li><b>Purpose:</b> Tells Python which file to work with and in what mode (read, write, or append).</li>
+                                        <li><b>Requirement:</b> Without <code>open()</code>, Python won't know the file's location or purpose.</li>
+                                    </ul>
+                                    <strong>Syntax:</strong><br>
+                                    <code>file = open("filename.txt", "mode")</code>
+                                    <ul>
+                                        <li><b>"filename.txt":</b> The name of the file.</li>
+                                        <li><b>"mode":</b> Tells Python what you want to do with the file(read,write, append). The default mode is read mode(‘r’)</li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="fileModesModal" tabindex="-1" aria-labelledby="fileModesLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fileModesLabel">File Modes</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <div style="font-size: 1.5rem;">
+                                    While opening the file, we can specify the mode in which we want to interact with the file like reading, writing, or appending.
+                                    <br><br>
+                                    <strong style="color: #28a745;">Different Modes:</strong>
+                                    <ul>
+                                        <li><b>Read Mode (<code>'r'</code>):</b> Opens the file for reading only.<br><img src="./images/image15.png" alt=""></li>
+                                        <li><b>Write Mode (<code>'w'</code>):</b> Opens the file for writing.It will overwrite existing content if the file exists and if it doesn’t it will create a new file.<br><img src="./images/image19.png" alt=""></li>
+                                        <li><b>Append Mode (<code>'a'</code>):</b> Opens the file for appending which means, it allows you to add new content at the end of the file without changing the existing data.<br><img src="./images/image17.png" alt=""></li>
+                                    </ul>
+                                    Let’s see what happens when we use the open() function for a file that does not exist.
+                                    <br><br>In Google Colab, you can see all the files by clicking on this folder icon.
+<br>
+                                    <img src="./images/image8.png" alt="" width="25%"><br>
+                                    <img src="./images/image10.png" alt=""><br>
+                                    <img src="./images/image9.png" alt=""><br>
+                                    <ul>
+                                        <li>It gives an error since the file named <code>TestFile.txt</code> does not exist.</li>
+                                    </ul>
+                                    <strong>Creating a New File:</strong><br>
+                                    <ol>
+                                        <li>To create a file, right-click in the Files area and select the <b>New File</b> option.</li>
+                                    </ol>
+                                    <img src="./images/image12.png" alt="" width="25%"><br>
+                                    <img src="./images/image11.png" alt="" width="25%"><br><br>
+                                    If you double-click the file, it will open a new window on the right where you can edit the file.
+                                    <br><br>
+                                    <img src="./images/image13.png" width="80%" alt=""><br><br>
+                                    <ul>
+                                        <li>Let’s add a line inside the file.</li>
+                                    </ul>
+                                    <img src="./images/image14.png" width="80%"  alt=""><br><br>
+
+                                    Now, let’s run the same command.
+                                    <br><img src="./images/image10.png" alt=""><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="readingFileModal" tabindex="-1" aria-labelledby="readingFileLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="readingFileLabel">Reading a File</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <div style="font-size: 1.5rem;">
+
+                                    
+
+                                    <ul>
+                                        <li><code>read()</code> reads the file’s content as a string and loads it into your program for further processing.</li>
+                                        <li>Opening a file only establishes access and the <code>read()</code>  function extracts the data stored in the file for use in your program.</li>
+                                    </ul>
+                                    <strong>Syntax:</strong><br>
+                                    <code>data = file.read()</code>
+                                    <br>
+                                    <img src="./images/image18.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="writingFileModal" tabindex="-1" aria-labelledby="writingFileLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="writingFileLabel">Writing to a File</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <div style="font-size: 1.5rem;">
+                                    <ul>
+                                        <li>The <code>write()</code> function as the name suggests lets you add or modify the contents of a file.</li>
+                                    </ul>
+                                    <strong>Syntax:</strong><br>
+                                    <code>file.write('New Data')</code><br>
+                                    <img src="./images/image20.png" alt="">
+                                    <br><br>
+                                    After executing this command you will notice the content of the file has been overwritten with the new content.
+                                    <br><br>
+                                    Right now the changes are taking some time to get reflected in the file, we will fix this issue in a while.
+                                    <br><br>
+                                    But, if you open the file in append mode(a), it retains the original content of the file.
+                                    <br>
+                                    <img src="./images/image21.png" alt="">
+                                    <br>
+                                    <br>
+                                    You must have noticed that the changes we are making are not getting immediately reflected, do you know why?
+                                    <br><br>
+                                    This is because the changes are not being saved immediately. To avoid this we can use the close() function.
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="closingFileModal" tabindex="-1" aria-labelledby="closingFileLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="closingFileLabel">Closing a File</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <div style="font-size: 1.5rem;">
+
+                                    <ul>
+                                        <li> <code>close()</code> ensures that any changes made to the file are saved and the file is properly released for other programs.                                        </li>
+                                        <li>If you do not close the file, the operating system may not immediately save changes, and the file might remain locked, causing issues for future access.</li>
+
+                                    </ul>
+                                    <strong>Syntax:</strong><br>
+                                    <code>file.close()</code>
+                                    <br><br>
+                                    <img src="./images/image22.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
